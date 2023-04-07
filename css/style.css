@@ -10,6 +10,17 @@ body{
     padding: 0;
 }
 
+body > header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 h1{
     font-size: 50px;
     line-height: 1;
@@ -51,7 +62,8 @@ nav{
 footer{
     background-color: black;
     color: white;
-    padding-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     text-align: center;
 }
 
@@ -89,11 +101,145 @@ nav a:focus, nav a:hover{
     text-decoration: underline;
 }
 
-@media screen and (min-width: 800px){
+.active {
+    border: solid 3px black;
+    padding-left: 20px;
+}
 
-    /* Step 9: Write the selector/rule property to style the nav element */
+.review {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.notebook {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+.notebook img {
+    margin-bottom: 1em;
+    margin-top: 10px;
+    width: 100vw;
+}
+
+.notebook figure {
+    flex-flow: column;
+    width: 100vw;
+}
+
+.notebook figcaption {
+    width: 100vw;
+}
+
+figcaption {
+    text-align: center;
+    font-weight: bold;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+/* tablet styling */
+
+@media screen and (min-width: 700px){
+
+    /* style the nav element */
     nav{
       padding: 30px 0px; 
       text-align: right;
+    }
+
+    /* in tablet view make two columns for the review images */
+    .review {
+        grid-template-columns: 1fr 1fr;
+        margin: 15px;
+    }
+
+    /* make the nav bar not sticky anymore */
+    body > header {
+        position: static;
+        width: 100%;
+        top: 0;
+    }
+
+    /* border only in big grid mode */
+    img {
+        border: solid 3px black;
+    }
+
+    .notebook {
+        flex-direction: row;
+    }
+
+    .notebook img {
+        width: 400px;
+    }
+    
+    .notebook figure {
+        width: 400px;
+        margin: 15px;
+    }
+    
+    .notebook figcaption {
+        width: 400px;
+    }
+}
+
+/* laptop styling */
+@media screen and (min-width: 1200px){
+
+    /* style the nav element */
+    nav{
+      padding: 30px 0px; 
+      text-align: right;
+    }
+
+    /* in laptop view make three columns for the review images */
+    .review {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 15px;
+    }
+
+    /* make the nav bar not sticky anymore */
+    body > header {
+        position: static;
+        width: 100%;
+        top: 0;
+    }
+
+    /* border only in big grid mode */
+    img {
+        border: solid 3px black;
+    }
+
+    .notebook {
+        flex-direction: row;
+    }
+
+    .notebook img {
+        width: 400px;
+    }
+    
+    .notebook figure {
+        width: 400px;
+        margin: 15px;
+    }
+    
+    .notebook figcaption {
+        width: 400px;
     }
 }
