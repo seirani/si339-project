@@ -155,7 +155,7 @@ a:hover {
 
 /* tablet styling */
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 600px){
 
     /* style the nav element */
     nav{
@@ -186,21 +186,21 @@ a:hover {
     }
 
     .notebook img {
-        width: 400px;
+        width: 300px;
     }
     
     .notebook figure {
-        width: 400px;
+        width: 300px;
         margin: 15px;
     }
     
     .notebook figcaption {
-        width: 400px;
+        width: 300px;
     }
 }
 
 /* laptop styling */
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 900px){
 
     /* style the nav element */
     nav{
@@ -231,15 +231,15 @@ a:hover {
     }
 
     .notebook img {
-        width: 400px;
+        width: 300px;
     }
     
     .notebook figure {
-        width: 400px;
+        width: 300px;
         margin: 15px;
     }
     
     .notebook figcaption {
-        width: 400px;
+        width: 300px;
     }
 }
