@@ -106,15 +106,14 @@ nav a:focus, nav a:hover{
     padding-left: 20px;
 }
 
+img {
+    max-width: 100%;
+}
+
 .review {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 15px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
 
 .notebook {
@@ -126,6 +125,7 @@ img {
 }
 
 .notebook img {
+    height: auto;
     margin-bottom: 1em;
     margin-top: 10px;
     width: 100vw;
@@ -167,6 +167,7 @@ a:hover {
     .review {
         grid-template-columns: 1fr 1fr;
         margin: 15px;
+        align-items: baseline;
     }
 
     /* make the nav bar not sticky anymore */
