@@ -21,17 +21,20 @@
 
     <main id = "main">
         <h1>Notebook Samples</h1>
+        <p>Filter by: </p>
         <div class="container">
             <div class="controls">
-                <button type="button" data-filter="all">All</button>
-                <button type="button" data-filter=".tv">TV</button>
-                <button type="button" data-filter=".music">Music</button>
-                <button type="button" data-filter=".film">Film</button>
-                <button type="button" data-filter=".books">Books</button>
-                <button type="button" data-filter=".digital-culture">Digital Culture</button>
+                <button type="button" id='all-button' data-filter="all">All</button>
+                <button type="button" id='tv-button' data-filter=".tv">TV</button>
+                <button type="button" id='music-button' data-filter=".music">Music</button>
+                <button type="button" id='film-button' data-filter=".film">Film</button>
+                <button type="button" id='books-button' data-filter=".books">Books</button>
+                <button type="button" id='digital-button' data-filter=".digital-culture">Digital Culture</button>
+                <button type="button" id="special-button" data-filter=".favorites">Serena's Favorites</button>
             </div>
+            <p id="hover" class="special">Hover over any of the images below to learn about why I love these pieces.</p>
             <div class="targets">
-                <div class="notebook">
+                <div class="notebook" id="notes">
                     <figure class="mix tv">
                         <a href="https://www.michigandaily.com/arts/b-side/not-your-average-family-sitcom-pilot/" target="_blank"><img src="images/sitcom.webp" alt="Girl in front of a broken laptop screen of a family"></a>
                         <a href="https://www.michigandaily.com/arts/b-side/not-your-average-family-sitcom-pilot/" target="_blank"><figcaption>Not-your-average family sitcom pilot</figcaption></a>
@@ -48,7 +51,7 @@
                         <a href="https://www.michigandaily.com/tv/all-i-want-for-christmas-is-cable-tv/" target="_blank"><img src="images/xmas.webp" alt="Stack of old TV sets with classic Christmas films on the screens"></a>
                         <a href="https://www.michigandaily.com/tv/all-i-want-for-christmas-is-cable-tv/" target="_blank"><figcaption>All I want for Christmas is cable TV</figcaption></a>
                     </figure>
-                    <figure class="mix books tv film">
+                    <figure class="mix books tv film favorites" id="image1">
                         <a href="https://www.michigandaily.com/arts/b-side/on-nancy-drew-scooby-doo-and-the-mysteries-of-childhood/" target="_blank"><img src="images/little-me.webp" alt="Little girl in front of a car"></a>
                         <a href="https://www.michigandaily.com/arts/b-side/on-nancy-drew-scooby-doo-and-the-mysteries-of-childhood/" target="_blank"><figcaption>On Nancy Drew, Scooby-Doo and the mysteries of childhood</figcaption></a>
                     </figure>
@@ -76,7 +79,7 @@
                         <a href="https://www.michigandaily.com/arts/b-side/bodies-bodies-bodies-internet-gossip-and-pseudo-intellectual-arts-criticism/" target="_blank"><img src="images/gossip.webp" alt="Girl reading a text message"></a>
                         <a href="https://www.michigandaily.com/arts/b-side/bodies-bodies-bodies-internet-gossip-and-pseudo-intellectual-arts-criticism/" target="_blank"><figcaption>"Bodies Bodies Bodies," internet gossip and pseudo-intellectural arts criticism</figcaption></a>
                     </figure>
-                    <figure class="mix music">
+                    <figure class="mix music favorites" id="image2">
                         <a href="https://www.michigandaily.com/arts/the-concert-the-sun-and-the-holy-spirit-of-lordes-solar-power/" target="_blank"><img src="images/lorde.webp" alt="Silhouette of Lorde"></a>
                         <a href="https://www.michigandaily.com/arts/the-concert-the-sun-and-the-holy-spirit-of-lordes-solar-power/" target="_blank"><figcaption>The concert, the sun and the holy spirit of Lorde’s "Solar Power"</figcaption></a>
                     </figure>
@@ -92,13 +95,28 @@
                         <a href="https://www.michigandaily.com/tv/elite-short-stories-guzman-caye-rebe-and-finding-comedy-where-you-least-expect-it/" target="_blank"><img src="images/elite.webp" alt="Cast of the TV Show Elite"></a>
                         <a href="https://www.michigandaily.com/tv/elite-short-stories-guzman-caye-rebe-and-finding-comedy-where-you-least-expect-it/" target="_blank"><figcaption>"Elite" and finding comedy where you least expect it</figcaption></a>
                     </figure>
-                    <figure class="mix music">
+                    <figure class="mix music favorites" id="image3">
                         <a href="https://www.michigandaily.com/arts/phoebe-bridgers-knows-the-end-but-how-do-we-deal-with-the-ending/" target="_blank"><img src="images/phoebe.webp" alt="Ghost with an I know the end sign"></a>
                         <a href="https://www.michigandaily.com/arts/phoebe-bridgers-knows-the-end-but-how-do-we-deal-with-the-ending/" target="_blank"><figcaption>Phoebe Bridgers knows the end, but how do we deal with the ending?</figcaption></a>
                     </figure>
         
                 </div>
             </div>
+        </div>
+        <br>
+        <div class="hover-texts">
+            <p id="nancy" class="special">This is the first piece I ever wrote for The Michigan Daily, and because of that it will
+                always be near and dear to my heart. It's one of my most raw and vulnerable pieces, dissecting one of my favorite songs
+                during a time where it felt like my entire life was falling apart, and the rest of the world too. 
+            </p>
+            <p id="lorde" class="special">This is the first piece I ever wrote for The Michigan Daily, and because of that it will
+                always be near and dear to my heart. It's one of my most raw and vulnerable pieces, dissecting one of my favorite songs
+                during a time where it felt like my entire life was falling apart, and the rest of the world too. 
+            </p>
+            <p id="phoebe" class="special">This is the first piece I ever wrote for The Michigan Daily, and because of that it will
+                always be near and dear to my heart. It's one of my most raw and vulnerable pieces, dissecting one of my favorite songs
+                during a time where it felt like my entire life was falling apart, and the rest of the world too. 
+            </p>
         </div>
     </main>
 
@@ -111,5 +129,6 @@
 
         var mixer = mixitup(containerEl);
     </script>
+    <script src="./js/special.js"></script>
 </body>
 </html>
