@@ -4,6 +4,8 @@ html{
 
 body{
     background-color: pink;
+    background-image: url(../images/background.png);
+    background-repeat: repeat-y;
     font-size: 18px;
     line-height: 1.15;
     margin: 0;
@@ -73,6 +75,10 @@ footer{
     padding: 30px;
 }
 
+.controls {
+    margin-left: 10px;
+}
+
 
 @media screen and (prefers-reduced-motion: reduce){
     html{
@@ -108,12 +114,14 @@ nav a:focus, nav a:hover{
 
 img {
     max-width: 100%;
+    margin-top: 10px;
 }
 
 .review {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 15px;
+    justify-items: center;
 }
 
 .notebook {
@@ -126,14 +134,13 @@ img {
 
 .notebook img {
     height: auto;
-    margin-bottom: 1em;
-    margin-top: 10px;
     width: 100vw;
 }
 
 .notebook figure {
     flex-flow: column;
     width: 100vw;
+    margin-top: 10px;
 }
 
 .notebook figcaption {
@@ -153,9 +160,28 @@ a:hover {
     color: blue;
 }
 
+a:focus {
+    color: blue;
+}
+
+#special-button {
+    visibility: hidden;
+}
+
+.special {
+    visibility: hidden;
+    text-align: center;
+}
+
+.hover-texts {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
 /* tablet styling */
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 700px){
 
     /* style the nav element */
     nav{
@@ -180,6 +206,16 @@ a:hover {
     /* border only in big grid mode */
     img {
         border: solid 3px black;
+        width: 300px;
+    }
+
+    figure {
+        width: 300px;
+        margin: 15px;
+    }
+
+    figcaption {
+        width: 300px;
     }
 
     .notebook {
@@ -201,13 +237,7 @@ a:hover {
 }
 
 /* laptop styling */
-@media screen and (min-width: 900px){
-
-    /* style the nav element */
-    nav{
-      padding: 30px 0px; 
-      text-align: right;
-    }
+@media screen and (min-width: 1050px){
 
     /* in laptop view make three columns for the review images */
     .review {
@@ -215,32 +245,8 @@ a:hover {
         margin: 15px;
     }
 
-    /* make the nav bar not sticky anymore */
-    body > header {
-        position: static;
-        width: 100%;
-        top: 0;
+    #special-button {
+        visibility: visible;
     }
 
-    /* border only in big grid mode */
-    img {
-        border: solid 3px black;
-    }
-
-    .notebook {
-        flex-direction: row;
-    }
-
-    .notebook img {
-        width: 300px;
-    }
-    
-    .notebook figure {
-        width: 300px;
-        margin: 15px;
-    }
-    
-    .notebook figcaption {
-        width: 300px;
-    }
 }
