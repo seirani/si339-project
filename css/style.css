@@ -86,9 +86,15 @@ footer{
     }
   
     .skip a{
-      -webkit-transition: none; /* sets to default setting */
-      transition: none;        /* sets to default setting */
+        -webkit-transition: none !important;     /* sets to default setting */
+        transition: none !important;      /* sets to default setting */
      }
+
+    body {
+        -webkit-transition: none !important;     /* sets to default setting */
+        transition: none !important; 
+    }
+
 }
 
 /* position the default position for the skip class element*/
@@ -171,6 +177,10 @@ a:focus {
 .special {
     visibility: hidden;
     text-align: center;
+}
+
+#hover {
+    margin-top: 10px;
 }
 
 .hover-texts {

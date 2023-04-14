@@ -136,7 +136,16 @@
     <script>
         var containerEl = document.querySelector('.targets');
 
-        var mixer = mixitup(containerEl);
+        const animation_off = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+        if(animation_off){
+            var mixer = mixitup(containerEl, {
+                animation: {
+                    enable: false
+                }
+            });
+        } else {
+            var mixer = mixitup(containerEl);
+        }
     </script>
 </body>
 </html>
