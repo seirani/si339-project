@@ -7,11 +7,12 @@ let image3 = document.getElementById("image3");
 let hover = document.getElementById("hover");
 let clicked = false;
 
+image1.querySelector("img").setAttribute("tabindex", 0);
+image2.querySelector("img").setAttribute("tabindex", 0);
+image3.querySelector("img").setAttribute("tabindex", 0);
+
 document.getElementById("special-button").addEventListener("click", function(){
     clicked = true;
-    image1.setAttribute("tabindex", 0);
-    image2.setAttribute("tabindex", 0);
-    image3.setAttribute("tabindex", 0);
     hover.style.visibility = "visible";
 });
 
@@ -137,6 +138,7 @@ image3.querySelector("img").addEventListener("blur", function(){
 });
 
 let sitcom = document.getElementById("sitcom");
+sitcom.querySelector("img").setAttribute("tabindex", 0);
 
 sitcom.querySelector("img").addEventListener("mouseover", function(){
     sitcom.querySelector("figcaption").innerHTML = "Design by Leah Hoogterp";
@@ -155,6 +157,7 @@ sitcom.querySelector("img").addEventListener("blur", function(){
 });
 
 let luke = document.getElementById("luke");
+luke.querySelector("img").setAttribute("tabindex", 0);
 
 luke.querySelector("img").addEventListener("mouseover", function(){
     luke.querySelector("figcaption").innerHTML = "Design by Sara Fang";
@@ -173,6 +176,7 @@ luke.querySelector("img").addEventListener("blur", function(){
 });
 
 let spielberg = document.getElementById("spielberg");
+spielberg.querySelector("img").setAttribute("tabindex", 0);
 
 spielberg.querySelector("img").addEventListener("mouseover", function(){
     spielberg.querySelector("figcaption").innerHTML = "Design by Leah Hoogterp";
@@ -191,6 +195,7 @@ spielberg.querySelector("img").addEventListener("blur", function(){
 });
 
 let xmas = document.getElementById("xmas");
+xmas.querySelector("img").setAttribute("tabindex", 0);
 
 xmas.querySelector("img").addEventListener("mouseover", function(){
     xmas.querySelector("figcaption").innerHTML = "Design by Evelyn Mousigian";
@@ -209,6 +214,7 @@ xmas.querySelector("img").addEventListener("blur", function(){
 });
 
 let thank = document.getElementById("thank");
+thank.querySelector("img").setAttribute("tabindex", 0);
 
 thank.querySelector("img").addEventListener("mouseover", function(){
     thank.querySelector("figcaption").innerHTML = "Design by Francie Ahrens";
@@ -227,6 +233,7 @@ thank.querySelector("img").addEventListener("blur", function(){
 });
 
 let teen = document.getElementById("teen");
+teen.querySelector("img").setAttribute("tabindex", 0);
 
 teen.querySelector("img").addEventListener("mouseover", function(){
     teen.querySelector("figcaption").innerHTML = "Design by Tye Kalinovic";
@@ -245,6 +252,7 @@ teen.querySelector("img").addEventListener("blur", function(){
 });
 
 let haunt = document.getElementById("haunt");
+haunt.querySelector("img").setAttribute("tabindex", 0);
 
 haunt.querySelector("img").addEventListener("mouseover", function(){
     haunt.querySelector("figcaption").innerHTML = "Design by Tamara Turner";
@@ -263,6 +271,7 @@ haunt.querySelector("img").addEventListener("blur", function(){
 });
 
 let dune = document.getElementById("dune");
+dune.querySelector("img").setAttribute("tabindex", 0);
 
 dune.querySelector("img").addEventListener("mouseover", function(){
     dune.querySelector("figcaption").innerHTML = "Design by Tamara Turner";
@@ -281,6 +290,7 @@ dune.querySelector("img").addEventListener("blur", function(){
 });
 
 let spooky = document.getElementById("spooky");
+spooky.querySelector("img").setAttribute("tabindex", 0);
 
 spooky.querySelector("img").addEventListener("mouseover", function(){
     spooky.querySelector("figcaption").innerHTML = "Design by Grace Filbin";
@@ -299,6 +309,7 @@ spooky.querySelector("img").addEventListener("blur", function(){
 });
 
 let bodies = document.getElementById("bodies");
+bodies.querySelector("img").setAttribute("tabindex", 0);
 
 bodies.querySelector("img").addEventListener("mouseover", function(){
     bodies.querySelector("figcaption").innerHTML = "Design by Serena Shen";
@@ -317,6 +328,7 @@ bodies.querySelector("img").addEventListener("blur", function(){
 });
 
 let netflix = document.getElementById("netflix");
+netflix.querySelector("img").setAttribute("tabindex", 0);
 
 netflix.querySelector("img").addEventListener("mouseover", function(){
     netflix.querySelector("figcaption").innerHTML = "Design by Erin Ruark";
@@ -335,6 +347,7 @@ netflix.querySelector("img").addEventListener("blur", function(){
 });
 
 let romcom = document.getElementById("romcom");
+romcom.querySelector("img").setAttribute("tabindex", 0);
 
 romcom.querySelector("img").addEventListener("mouseover", function(){
     romcom.querySelector("figcaption").innerHTML = "Design by Jennie Vang";
